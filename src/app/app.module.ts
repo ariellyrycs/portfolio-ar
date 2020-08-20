@@ -18,7 +18,7 @@ registerLocaleData(en, 'en');
 
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'http://localhost:3000/content/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'content/i18n/', '.json');
 }
 
 @NgModule({
