@@ -11,7 +11,7 @@ const port = 3000;
  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/content', express.static('server/personal'));
+app.use('/content', express.static('server/assets'));
 
 app.get('/personal', (req, res) => {
     res.json({});

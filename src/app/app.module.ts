@@ -13,11 +13,12 @@ import { HomeComponent } from './home/home.component';
 
 import { registerLocaleData } from '@angular/common'; 
 import en from '@angular/common/locales/en';  
+
 registerLocaleData(en, 'en');
 
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'http://localhost:3000/content/', '.json');
+  return new TranslateHttpLoader(http, 'http://localhost:3000/content/i18n/', '.json');
 }
 
 @NgModule({
