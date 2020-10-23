@@ -1,28 +1,57 @@
-<mat-grid-list cols="3" rowHeight="200px">
+<mat-grid-list
+    cols="3"
+    rowHeight="200px"
+    [style.background]="'white'"
+    >
+    <mat-grid-tile
+        class="direction-vertical"
+        [colspan]="1"
+        [rowspan]="2"
+        >
+        <div class="side left">
+            <div>
+                <h1 class="bold font-size-lg margin-bottom-lg">
+                    {{'NAME' | translate}}
+                </h1>
+            </div>
+            <div class="margin-bottom-md">
+                <h2 class="main-color margin-bottom-sm">{{'PROFESION' | translate}}</h2>
+                <div class="sub-header-divisor"></div>
+            </div>
+            <div>
+                <p>
+                    {{'SHORT_DESCRIPTION' | translate}}
+                </p>
+            </div>
+        </div>
+    </mat-grid-tile>
     <mat-grid-tile
         [colspan]="1"
         [rowspan]="2"
-        [style.background]="'white'"
+        rowHeight="400px"
         >
-
+            <div class="mark left-top"></div>
+            <div class="mark right-bottom"></div>
+            <img src="content/img/main.jpeg" alt="" draggable=false />
     </mat-grid-tile>
     <mat-grid-tile
         [colspan]="1"
         [rowspan]="2"
         >
-        <img src="content/img/main.jpeg" alt="" draggable=false>
-    </mat-grid-tile>
-    <mat-grid-tile
-        [colspan]="1"
-        [rowspan]="2"
-        [style.background]="'white'"
-        >
-        
+        <div class="side algin-center">
+            <div *ngFor="let s of ('SKILLS' | translate)" class="margin-bottom-md">
+                <div class="margin-bottom-sm">
+                    <span class="bold">{{s.skill}} (<span class="main-color">{{s.porcentage}}</span>)%</span>
+                </div>
+                <mat-progress-bar mode="determinate" value="{{s.porcentage}}"></mat-progress-bar>
+            </div>            
+        </div>
     </mat-grid-tile>
     <mat-grid-tile
         [colspan]="3"
         [rowspan]="1"
         >
+        
         
     </mat-grid-tile>
 </mat-grid-list>

@@ -1,0 +1,60 @@
+$main-color = #c2185b;
+
+$margin-sm = 10px;
+$margin-md = 20px;
+$margin-lg = 30px;
+
+
+.mark
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    box-sizing: border-box;
+    border-color: black;
+    border-style: solid;
+
+    &.right-bottom
+        border-width: 0 5px 5px 0;
+        right: 10px;
+        bottom: 10px;
+
+    &.left-top
+        border-width: 5px 0 0 5px;
+        left: 10px;
+        top: 10px;
+    
+
+.side
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px 10px;
+    box-sizing: border-box;
+    &.left
+        text-align: right;
+
+.margin-bottom-sm
+    margin-bottom: $margin-sm;
+
+.margin-bottom-md
+    margin-bottom: $margin-md;
+
+.margin-bottom-lg
+    margin-bottom: $margin-lg;
+
+.bold
+    font-weight: bold;
+
+.font-size-lg
+    font-size: 2rem;
+
+.main-color
+    color: $main-color;
+
+.sub-header-divisor
+    background-color: $main-color;
+    margin-left: auto;
+    height: 5px;
+    width: 30%;
+
+.algin-center
+    text-align: center;
